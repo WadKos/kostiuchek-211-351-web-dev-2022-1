@@ -87,3 +87,13 @@ p {
     color: white;
     border-color: white;
 }
+
+table {
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid black;
+    text-align: center;
+    padding: 10px;
+}
