@@ -16,7 +16,7 @@
         <form method="POST" action="http://httpbin.org/post">
             <div>
                 <label for="fio">ФИО</label>
-                <input type="text" name="fio" id="fio" placeholder="Введите ФИО">                    
+                <input type="text" name="fio" id="fio" placeholder="Введите ФИО" required>                    
             </div>
             <div>
                 <label for="email">Адрес электронной почты</label>
@@ -41,7 +41,7 @@
             
             <div>
                 <label for="category">Категория обращения</label>
-                <select name="category" id="category" >
+                <select name="category" id="category" required>
                     <option value="1">Жалоба</option>
                     <option value="2">Предложение</option>
                 </select>
@@ -49,16 +49,16 @@
 
             <div>
                 <label for="msg">Текст сообщения</label>
-                <textarea name="msg" id="msg" cols="60" rows="20">Текст сообщения</textarea>
+                <textarea name="msg" id="msg" cols="60" rows="20" required>Текст сообщения</textarea>
             </div>
 
             <div>
-                <input type="checkbox" name="agreement" id="agreement" value="true">
+                <input type="checkbox" name="agreement" id="agreement" value="true" required>
                 <label for="agreement">Согласен на обработку персональных данных</label>
             </div>
             
             <div>
-                <input type="file" name="file" id="file">
+                <input type="file" name="file" id="file" required>
                 <label for="file">Прикрепить файл</label>
             </div>
             <button type="submit">Отправить</button>
