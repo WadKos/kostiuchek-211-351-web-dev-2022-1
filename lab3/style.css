@@ -1,0 +1,278 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    min-height: 100vh;
+    position: relative;
+    background-color: #212529;
+}
+
+body::after {
+    content: "";
+    display: block;
+    height: 55px;
+}
+
+.header {
+    background-color:  #110722;
+    padding: 1rem 0;
+    border-bottom: 5px solid purple;
+    position: sticky;
+    top: 0;
+}
+
+.footer {
+    background-color: #110722;
+    color: white;
+    padding: 1rem 0;
+    border-top: 5px solid purple;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.main-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+.main-menu ul li{
+
+    display: inline;
+    margin-right: 0.625rem;
+}
+.main-menu ul li a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.main-menu ul li:last-child {
+    margin-right: 0;
+}
+
+.container {
+    max-width: 95%;
+    margin: 0 auto;
+}
+
+
+.profile a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* .clearfix {
+    clear: both;
+} */
+
+.sidebar {
+    padding: 1rem 0;
+    width: 15rem;
+    top: 55px;
+    flex-shrink: 0;
+}
+
+.page-content {
+    padding: 1rem;
+}
+
+.contact-link {
+    font-size: 25px;
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+.contact-image {
+    height: 20px;
+}
+
+.products-category-header {
+    color: white;
+    justify-content: center;
+    text-align: center;
+    margin-top: 0;
+}
+
+.product-card {
+    display: flex;
+    height: 22rem;
+    width: 28rem;
+    border: 2px solid purple;
+    border-radius: 5px;
+    
+    background-color: rgb(240,240,240);
+}
+
+.product-image {
+    height: 100%;
+    flex-basis: 50%;
+}
+
+.product-image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.product-details {
+    height: 100%;
+    flex-basis: 50%;
+    padding: 1rem;
+}
+
+.product-details header {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.product-details .information {
+    text-align: center;
+    font-size: 1.125rem;
+    height: 65%;
+    overflow: auto;
+}
+
+.product-details .control {
+    text-align: center;
+}
+
+.product-details .btn {
+    font-size: 1rem;
+    color: white;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    padding: 0;
+    overflow: hidden;
+}
+
+.product-details .btn span {
+    display: inline-block;
+    padding: 0.25rem 0.25rem;
+}
+
+.product-details .btn .price {
+    background-color: #333;
+}
+
+.product-details .btn .buy {
+    background-color: #0885c6;
+    font-weight: bold;
+}
+
+.sidebar-section {
+    
+    border: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 1.25rem;
+}
+
+.sidebar-section legend {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.scroll-to-top-btn {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    z-index: 1;
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    background-color: rgb(51,51,51);
+    color: white;
+    font-size: 1.5rem;
+}
+
+.d-flex {
+    display: flex;
+}
+.main-menu {
+    flex-grow: 1;
+}
+
+.products-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.625rem;
+}
+
+.proudct_header {
+    text-align: center;
+}
+
+@media print{
+    .sidebar, .scroll-to-top-btn, .header{
+        display: none;
+    }
+
+    .products-list {
+        justify-content: center ;
+    }
+    .products-category-header{
+        text-align: center;
+    }
+
+    .btn {
+        border: 1px solid black;
+        color: black;
+    }
+}
+
+@media all and (max-width: 768px) {
+    .main-menu ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .direction-column{
+        flex-direction: column;
+    }
+    
+    .profile{
+        margin-left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .products-list{
+        justify-content: center;
+    }
+
+    .products-category-header{
+        text-align: center;
+    }
+
+    main{
+        align-items: center;
+    }
+
+    .product-card{
+        flex-direction: column;
+        width: 95%;
+        max-width: 350px;
+        height: auto;
+    }
+    
+    .product-details .information{
+        height: auto;
+    }
+
+    .header{
+        position: static;
+    }
+}
