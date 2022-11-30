@@ -180,6 +180,38 @@ body::after {
     margin-bottom: 0.25rem;
 }
 
+.catalog-item {
+    display: flex;
+    flex-direction: column;
+    height: 30rem;
+    width: 20rem;
+    align-items: center;
+}
+
+.catalog-image {
+    border: 3px solid purple;
+    border-radius: 4px;
+    height: 80%;
+}
+
+.catalog-datails {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+.catalog-datails a {
+    color: white;
+    text-decoration: none;
+}
+
+.catalog-image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
 .scroll-to-top-btn {
     position: fixed;
     bottom: 15px;
@@ -207,6 +239,13 @@ body::after {
     display: flex;
     flex-wrap: wrap;
     gap: 0.625rem;
+}
+
+.catalog-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5rem;
 }
 
 .proudct_header {
@@ -252,6 +291,7 @@ body::after {
     .products-list{
         justify-content: center;
     }
+
 
     .products-category-header{
         text-align: center;
