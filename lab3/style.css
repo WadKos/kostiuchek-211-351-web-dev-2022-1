@@ -185,7 +185,7 @@ body::after {
     flex-direction: column;
     height: 30rem;
     width: 20rem;
-    align-items: center;
+    /* align-items: center; */
 }
 
 .catalog-image {

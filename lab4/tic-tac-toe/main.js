@@ -1,47 +1,13 @@
 let count = 0;
 let gameOver = 0;
 
-function initBoard() {
-    let board = document.getElementById("board");
-    for (let i = 0; i < 9; i++) {
-        let div = document.createElement("div");
-        div.className = "cell";
-        board.append(div);
-    }
-    return board;
-}
-
-function clickHandler(event) {
-    if (event.target.className != "cell") {
-        return;
-    }
-
-    if (gameOver == 1) {
-        showMessage("Игра завершена", "danger");
-        return;
-    }
-
-    if (event.target.innerHTML != ""){
-        showMessage("Клетка занята","danger");
-        return;
-    }
-
-    event.target.innerHTML = count % 2 == 0 ? "X" : "O";
-    count++;
-    
-    let winner = findWinner();
-    if (winner || count == 9) {
-        showMessage(winner ? winner + " Одержал победу" : "Ничья");
-        gameOver = 1;
-    }
-}
-
-function newGame() {
-    let cells = document.getElementsByClassName("cell");
-    for (let cell of cells) {
-        cell.innerHTML = ""; 
-    }
-    count = gameOver = 0;
+function showMessage(msg, category = 'success') {
+    let div = document.createElement('div');
+    div.classList.add('msg', category);
+    div.innerHTML = msg;
+    let messagesDiv = document.querySelector('.messages');
+    messagesDiv.append(div);
+    setTimeout(() => div.remove(), 2000);
 }
 
 function findWinner() {
@@ -79,14 +45,49 @@ function findWinner() {
     return winner;
 }
 
-function showMessage(msg, category = 'success') {
-    let div = document.createElement('div');
-    div.classList.add('msg', category);
-    div.innerHTML = msg;
-    let messagesDiv = document.querySelector('.messages');
-    messagesDiv.append(div);
-    setTimeout(() => div.remove(), 2000);
+function initBoard() {
+    let board = document.getElementById("board");
+    for (let i = 0; i < 9; i++) {
+        let div = document.createElement("div");
+        div.className = "cell";
+        board.append(div);
+    }
+    return board;
 }
+
+function clickHandler(event) {
+    if (event.target.className != "cell") {
+        return;
+    }
+
+    if (gameOver == 1) {
+        showMessage("Игра завершена", "danger");
+        return;
+    }
+
+    if (event.target.innerHTML != "") {
+        showMessage("Клетка занята", "danger");
+        return;
+    }
+
+    event.target.innerHTML = count % 2 == 0 ? "X" : "O";
+    count++;
+    
+    let winner = findWinner();
+    if (winner || count == 9) {
+        showMessage(winner ? winner + " Одержал победу" : "Ничья");
+        gameOver = 1;
+    }
+}
+
+function newGame() {
+    let cells = document.getElementsByClassName("cell");
+    for (let cell of cells) {
+        cell.innerHTML = ""; 
+    }
+    count = gameOver = 0;
+}
+
 
 window.onload = function () {
     let board = initBoard();
@@ -94,5 +95,4 @@ window.onload = function () {
 
     let newGameBtn = document.querySelector(".new-game-btn");
     newGameBtn.onclick = newGame;
-}
-
+};
