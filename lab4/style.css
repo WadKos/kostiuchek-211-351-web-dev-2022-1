@@ -1,0 +1,11 @@
+.main-buttons {
+    text-align: center;
+}
+.main-buttons a {
+    margin: 5px;
+    padding: 4px;
+    border: 1px black solid;
+    font-size: 3rem;
+    text-decoration: none;
+    color: black;
+}
