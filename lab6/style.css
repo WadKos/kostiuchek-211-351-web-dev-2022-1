@@ -1,0 +1,39 @@
+body{
+    color: #FFB715;
+}
+
+.hero {
+    background-color: #1F1714;
+}
+
+.logo {
+    width: 150px;
+}
+
+.main-character {
+    background-color: #1F1714;
+}
+
+.technologies {
+    background-color: #1F1714;
+}
+
+.heading-line {
+    background-color: #261512;
+    width: 200px;
+    height: 3px;
+}
+
+.contacts {
+    background-color: #1F1714;
+}
+
+.footer {
+    background-color: #261512;
+}
+
+.heading-line-foot {
+    background-color: #261512;
+    width: 300px;
+    height: 3px;
+}
