@@ -219,3 +219,6 @@ window.onload = function () {
     let buttons = document.querySelector(".buttons");
     buttons.onclick = clickHandler; 
 };
+
+//5 6 5 - *
+//5*(6-5)
